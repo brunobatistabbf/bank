@@ -1,8 +1,6 @@
 import bankSystem
 import random
 
-
-
 class Account():
     accountID = 0
     userID:str
@@ -13,6 +11,7 @@ class Account():
         accountID = random.getrandbits(32)
         self.userID = userID
         self.balance = balance
+
 
     def withDraw(self, valor):
         if (valor > self.balance):
@@ -35,4 +34,5 @@ class Account():
         print("Saldo: "+ self.balance)
         print("Numero de transacoes: " + self.transacoes)
         print("----------------------------------")
+
 
